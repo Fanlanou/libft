@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:38:50 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/13 14:11:33 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/09/18 14:12:17 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,11 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-int main()
+/*int main()
 {
 	char *target = "hello world!";
 	int	lf = 'a';
 
 	printf("%s\n",ft_strchr(target, lf));
 }
+*/

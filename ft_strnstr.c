@@ -6,37 +6,63 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 16:07:24 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/16 00:57:52 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/09/18 14:09:22 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+/*char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	//char	*b = (char *)big;
-	//char	*l = (char *)little;
-	size_t			bl = ft_strlen((char *)big);
-	size_t			ll = ft_strlen((char *)little);
+	size_t	bl;
+	size_t	ll;
 
+	bl = ft_strlen((char *)big);
+	ll = ft_strlen((char *)little);
 	if (ll == 0)
 		return ((char *)big);
-	if (bl < ll)
-		return (0);
-	while (len-- >= ll)
+	if (bl < len)
+		len = bl;
+	while (bl >= ll && len >= ll)
 	{
 		if (ft_memcmp(big, little, ll) == 0)
 			return ((char *)big);
 		big++;
+		len--;
 	}
 	return (0);
-}
-
-int main()
+}*/
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	char	*s1 ="hello world!";
-	char	*s2 = "orl";
-	size_t	n =10;
-	printf("%s\n",ft_strnstr(s1, s2, n));
-	printf("%s\n",strnstr(s1, s2, n));
+	size_t		i;
+	size_t		j;
+
+	i = 0;
+	if (*needle == '\0' || needle == NULL)
+		return ((char*)haystack);
+	while (haystack[i] != '\0' && i < len)
+	{
+		j = 0;
+		while (needle[j] == haystack[i + j] && i + j < len)
+		{
+			if (needle[j + 1] == '\0')
+			{
+				return ((char*)haystack + i);
+			}
+			j++;
+		}
+		i++;
+	}
+	return (NULL);
 }
+#include "libft.h"
+
+/*int	main ()
+{
+	const char *bb = "hello world!";
+	const char *lit = "worl";
+
+	printf("%s\n", ft_strnstr(bb, lit, 10));
+	printf("%s\n", strnstr(bb, lit, 10));
+}
+*/

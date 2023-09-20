@@ -1,27 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memset!!!!.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 11:13:14 by vvilensk          #+#    #+#             */
-/*   Updated: 2023/09/17 15:10:42 by jbagomed         ###   ########.fr       */
+/*   Created: 2023/09/04 14:03:08 by jbagomed          #+#    #+#             */
+/*   Updated: 2023/09/17 14:57:37 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "stddef.h"
+#include <stdio.h>
 
-void	ft_bzero(void *dest, size_t n)
+void	*ft_memset(void *str, int ch, size_t n)
 {
-	char	*buf;
+	unsigned char	*ptr;
 
-	buf = (char *)dest;
+	ptr = (unsigned char *)str;
 	while (n > 0)
 	{
-		buf = '\0';
-		buf++;
+		*ptr = (unsigned char)ch;
+		ptr++;
 		n--;
 	}
+	return (str);
 }
+
+/*int main()
+{
+	char numbers[100];
+
+	unsigned char *ptr;
+	ptr = (unsigned char *)numbers;
+	ft_memset(ptr, 'a', sizeof(numbers));
+
+	for(int i = 0; i < sizeof(numbers); i++)
+	  printf("%c ",numbers[i]);
+	printf ("\n");
+	return (0);
+}
+*/

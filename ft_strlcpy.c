@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:11:29 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/12 13:53:31 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/09/18 14:10:33 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 	return (ft_strlen((char *)src));
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	d[100];
 	char	*s;
@@ -41,6 +41,7 @@ int	main(void)
 	printf("after: %s\n", d);
 	strlcpy(d, s, size);
 	/*printf("%u orig strlcp:\n", strlcpy(d, s, size));
-	printf("%s,            :\n", d);*/
+	printf("%s,            :\n", d);
 	return (0);
 }
+*/
