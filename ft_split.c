@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 11:19:29 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/20 12:28:53 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/09/23 17:10:47 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,8 @@ char	**ft_split(char const *s, char c)
 	return (ss);
 }
 
-int main()
+/*int main()
 {
-	
+
 }
+*/
