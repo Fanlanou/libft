@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 13:14:33 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/18 15:19:17 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/09/26 22:44:44 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*buf;
-	char	*str;
+	//char	*str;
 	int		beg;
 	int		end;
 	int		count;
@@ -40,11 +40,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 		count++;
 		beg++;
 	}
-	ft_strlcpy (s1, buf, end - beg + 1);
-	return (s1);
+	ft_strlcpy ((char *)s1, buf, end - beg + 1);
+	return ((char *)s1);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <unistd.h>
 #include <string.h>
 
@@ -58,3 +58,4 @@ int main()
   ft_strtrim(a, b);
   printf("trimmed string: %s,\n", c);
 }
+*/

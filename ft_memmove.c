@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 12:49:58 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/11 14:30:00 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/09/25 22:49:41 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,11 @@ void	*ft_memmove(void *dest, void *src, size_t n)
 {
 	char	*d;
 	char	*s;
-	int		i;
 
-	i = 0;
 	d = (char *)dest;
 	s = (char *)src;
-
+	if (dest == src)
+		return(dest);
 	if (d > s)
 	{
 		while (n > 0)
@@ -41,7 +40,7 @@ void	*ft_memmove(void *dest, void *src, size_t n)
 	return (dest);
 }
 
-#include <string.h>
+/*#include <string.h>
 
 int	main()
 {
@@ -56,3 +55,4 @@ int	main()
 	printf("%s\n%s\n", my_dst, dst);
 	return 0;
 }
+*/

@@ -6,20 +6,19 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:11:29 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/18 14:10:33 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/09/26 23:17:53 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 {
-	int		i;
+	size_t		i;
 
 	i = 0;
+	if (n == 0)
+		return (ft_strlen((char *)src));
 	while (src[i] != '\0' && i < (n - 1))
 	{
 		dst[i] = src[i];
@@ -28,20 +27,22 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 	dst[i] = '\0';
 	return (ft_strlen((char *)src));
 }
-
-/*int	main(void)
+/*
+int	main(void)
 {
-	char	d[100];
+	char	d[100] = "EXAMPLE";
 	char	*s;
 	int	size = 5;
 
-	s = "abcdefghigklmnop";
+	s = "0123456789";
 	printf("before:%s\n", d);
 	printf("length:%zu\n", ft_strlcpy(d, s, size));
 	printf("after: %s\n", d);
 	strlcpy(d, s, size);
-	/*printf("%u orig strlcp:\n", strlcpy(d, s, size));
-	printf("%s,            :\n", d);
+	printf("orig strlcp: %u\n", strlcpy(d, s, size));
+	printf("%s\n", d);
+	printf("For francinette: %zu\n", ft_strlcpy(d, "lorem ipsum dolor sit amet", 0));
+	printf("orig francinette: %u\n", strlcpy(d, "lorem ipsum dolor sit amet", 0));
 	return (0);
 }
 */

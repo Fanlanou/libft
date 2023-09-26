@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 15:19:58 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/18 12:48:59 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/09/27 00:26:16 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strdup(const char *s)
 {
 	char	*copy;
 
-	copy = (char *)malloc(sizeof(s) + 1);
+	copy = (char *)malloc(ft_strlen(s) + 1);
 	if (!copy)
 		return (NULL);
 	ft_memcpy(copy, (void *)s, ft_strlen(s) + 1);

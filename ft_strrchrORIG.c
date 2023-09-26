@@ -1,37 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchrORIG.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 12:38:50 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/26 14:57:30 by jbagomed         ###   ########.fr       */
+/*   Created: 2023/09/13 13:58:14 by jbagomed          #+#    #+#             */
+/*   Updated: 2023/09/26 22:34:00 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
-{
-	char *str;
+char	*ft_strrchr(const char *s, int c)
+{dfg
+	int len;
 
-	str = (char *)s;
-
-	while (*str != c)
+	len = ft_strlen(s);
+	while (len >= 0)
 	{
-		if(*str == '\0')
-			return(0);
-		str++;
+		if (s[len] == c)
+			return ((char*)&s[len]);
+		len--;
 	}
-	return (str);
+	return (0);
 }
+char	*ft_strrchr(const char *str, int c)
+{
+	int		i;
 
-/*int main()
+	i = ft_strlen((char *)str);
+	while (i >= 0)
+	{
+		if (str[i] == c)
+			return ((char *)&str[i]);
+		i--;
+	}
+	if (i < 0)
+		return ((char *)&str[i]);
+	return (NULL);
+}
+/*
+int main()
 {
 	char *target = "hello world!";
-	int	lf = 'a';
+	int	lf = 'o';
 
-	printf("%s\n",ft_strchr(target, lf));
+	printf("%s\n",ft_strrchr(target, lf));
 }
 */

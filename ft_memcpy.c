@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 12:37:34 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/11 14:24:00 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/09/25 22:57:03 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t len)
 {
-	int		i;
+	size_t		i;
 	char	*char_dest;
 	char	*char_src;
 
 	char_dest = (char *) dest;
 	char_src = (char *) src;
 	i = 0;
+	if (src == NULL && dest == NULL)
+		return (NULL);
 	while (i < len)
 	{
 		char_dest[i] = char_src[i];

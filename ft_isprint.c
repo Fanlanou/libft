@@ -1,37 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 12:38:50 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/26 14:57:30 by jbagomed         ###   ########.fr       */
+/*   Created: 2023/09/25 14:32:45 by jbagomed          #+#    #+#             */
+/*   Updated: 2023/09/25 15:00:06 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_isprint(int c)
 {
-	char *str;
-
-	str = (char *)s;
-
-	while (*str != c)
+	if (c >= 32 && c <= 126)
 	{
-		if(*str == '\0')
-			return(0);
-		str++;
+		return (1);
 	}
-	return (str);
+	return (0);
 }
-
-/*int main()
-{
-	char *target = "hello world!";
-	int	lf = 'a';
-
-	printf("%s\n",ft_strchr(target, lf));
-}
-*/

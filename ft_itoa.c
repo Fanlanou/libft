@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 13:01:59 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/20 15:13:59 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/09/25 22:35:26 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,9 @@ char	*ft_itoa(int n)
 }
 */
 
-int      main()
+/*int      main()
 {
 int d = 5;
 printf("%d =? %s\n", d, ft_itoa(d));
 }
+*/

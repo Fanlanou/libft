@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 14:07:07 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/18 14:08:53 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/09/26 14:52:36 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ptr;
 
 	if (nmemb == 0 || size == 0)
-		return (0);
+		return (malloc(0));
+	if (nmemb * size / size != nmemb)
+		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (ptr == 0)
 		return (0);
