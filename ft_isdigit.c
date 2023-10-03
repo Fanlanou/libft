@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbagomed <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 14:36:17 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/04 14:40:44 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/09/29 17:11:20 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	is_digit(int i)
+int	ft_isdigit(int i)
 {
 	if (i >= '0' && i <= '9')
 		return (1);

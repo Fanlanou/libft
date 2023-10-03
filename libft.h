@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 12:41:28 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/25 22:04:48 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/10/03 15:40:42 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,9 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_isprint(int c);
 int		ft_atoi(const char *nptr);
-int		is_digit(int i);
+int		ft_isdigit(int i);
 int		ft_isascii(int c);
 int		ft_isalpha(char a);
-int		is_digit(int i);
 int		ft_isalnum(char a);
 int		ft_strlen(const char *str);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -43,7 +42,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 void	*ft_memset(void *str, int ch, size_t n);
-void	*ft_memcpy(void *dest, void *src, size_t len);
+void	*ft_memcpy(void *dest,const void *src, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memmove(void *dest, void *src, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
