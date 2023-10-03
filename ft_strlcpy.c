@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:11:29 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/26 23:17:53 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:28:34 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 	dst[i] = '\0';
 	return (ft_strlen((char *)src));
 }
+
 /*
 int	main(void)
 {
@@ -41,7 +42,8 @@ int	main(void)
 	strlcpy(d, s, size);
 	printf("orig strlcp: %u\n", strlcpy(d, s, size));
 	printf("%s\n", d);
-	printf("For francinette: %zu\n", ft_strlcpy(d, "lorem ipsum dolor sit amet", 0));
+	printf("For francinette: %zu\n", ft_strlcpy(d,
+	"lorem ipsum dolor sit amet", 0));
 	printf("orig francinette: %u\n", strlcpy(d, "lorem ipsum dolor sit amet", 0));
 	return (0);
 }

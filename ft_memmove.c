@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 12:49:58 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/25 22:49:41 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:38:26 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dest, void *src, size_t n)
 	d = (char *)dest;
 	s = (char *)src;
 	if (dest == src)
-		return(dest);
+		return (dest);
 	if (d > s)
 	{
 		while (n > 0)
@@ -31,12 +31,7 @@ void	*ft_memmove(void *dest, void *src, size_t n)
 		}
 	}
 	else
-		/*while (n > i)
-		{
-			d[i] = s[i];
-			i++;
-		}*/
-	ft_memcpy(dest, src, n);
+		ft_memcpy(dest, src, n);
 	return (dest);
 }
 

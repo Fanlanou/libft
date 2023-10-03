@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 13:14:33 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/28 16:08:29 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/10/03 16:18:19 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,40 +45,34 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return ((char *)buf);
 }
 */
+// Находим начало обрезанной части
+// Находим конец обрезанной части
+// Вычисляем длину обрезанной части
+// Выделяем память для новой строки и копируем обрезанную часть
 #include "libft.h"
 #include <stdlib.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-    size_t	start;
-    size_t	end;
-    char	*trimmed_str;
+	size_t	start;
+	size_t	end;
+	char	*trimmed_str;
+	size_t	len;
 
-    if (!s1 || !set)
-        return (NULL);
-
-    start = 0;
-    end = ft_strlen(s1);
-
-    // Находим начало обрезанной части
-    while (s1[start] && ft_strchr(set, s1[start]))
-        start++;
-
-    // Находим конец обрезанной части
-    while (end > start && ft_strchr(set, s1[end - 1]))
-        end--;
-
-    // Вычисляем длину обрезанной части
-    size_t len = end - start;
-
-    // Выделяем память для новой строки и копируем обрезанную часть
-    trimmed_str = (char *)malloc(len + 1);
-    if (!trimmed_str)
-        return (NULL);
-
-    ft_strlcpy(trimmed_str, s1 + start, len + 1);
-
-    return (trimmed_str);
+	if (!s1 || !set)
+		return (NULL);
+	start = 0;
+	end = ft_strlen(s1);
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	while (end > start && ft_strchr(set, s1[end - 1]))
+		end--;
+	len = end - start;
+	trimmed_str = (char *)malloc(len + 1);
+	if (!trimmed_str)
+		return (NULL);
+	ft_strlcpy(trimmed_str, s1 + start, len + 1);
+	return (trimmed_str);
 }
 
 /*#include <stdio.h>

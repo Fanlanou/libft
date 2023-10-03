@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 14:07:07 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/26 14:52:36 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/10/03 16:18:53 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (ptr == 0)
 		return (0);
 	ft_bzero(ptr, nmemb * size);
-	//ft_memset(ptr, 0, nmemb * size);
 	return (ptr);
 }
 

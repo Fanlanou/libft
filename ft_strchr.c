@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:38:50 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/29 17:39:19 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/10/03 16:14:29 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,17 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (str);
 }*/
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    while (*s != '\0')
-    {
-        if (*s == (char)c)
-            return (char *)s;
-        s++;
-    }
-    if (*s == (char)c)
-        return (char *)s;
-    return (0);
+	while (*s != '\0')
+	{
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
+	}
+	if (*s == (char)c)
+		return ((char *)s);
+	return (0);
 }
 
 /*int main()

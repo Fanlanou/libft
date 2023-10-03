@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 11:13:14 by vvilensk          #+#    #+#             */
-/*   Updated: 2023/09/25 17:04:03 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/10/03 16:01:39 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	ft_bzero(void *dest, size_t n)
 {
-	 char	*buf;
+	char	*buf;
 
 	buf = (char *)dest;
 	while (n > 0)

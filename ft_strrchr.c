@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 14:40:41 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/10/01 00:24:37 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/10/03 16:17:50 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,17 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int len;
+	int		len;
 
 	len = ft_strlen(s);
 	while (len >= 0)
 	{
 		if (s[len] == (unsigned char)c)
-			return((char *)&s[len]);
+			return ((char *)&s[len]);
 		len--;
 	}
 	return (0);
 }
-
-
 /*int main()
 {
 	char *target = "hello world!";

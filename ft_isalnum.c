@@ -6,13 +6,15 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 14:42:43 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/24 20:48:15 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/10/03 16:21:17 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalnum(char a)
 {
-	if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z') || (a >= '0' && a <= '9'))
+	if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z'))
+		return (1);
+	else if ((a >= '0' && a <= '9'))
 		return (1);
 	return (0);
 }

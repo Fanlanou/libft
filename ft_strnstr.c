@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 16:07:24 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/18 14:09:22 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/10/03 16:19:46 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	i = 0;
 	if (*needle == '\0' || needle == NULL)
-		return ((char*)haystack);
+		return ((char *)haystack);
 	while (haystack[i] != '\0' && i < len)
 	{
 		j = 0;
@@ -47,7 +47,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		{
 			if (needle[j + 1] == '\0')
 			{
-				return ((char*)haystack + i);
+				return ((char *)haystack + i);
 			}
 			j++;
 		}
@@ -55,7 +55,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-#include "libft.h"
 
 /*int	main ()
 {

@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 16:26:59 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/10/03 14:36:59 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:27:24 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,26 +21,24 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (0);
-
 	slen = ft_strlen(s);
 	if (start >= slen)
 		return (ft_strdup(""));
 	if (len > slen - start)
 		len = slen - start;
-
-	if (!(new_str = (char *)malloc(len + 1)))
+	new_str = (char *)malloc(len + 1);
+	if (!new_str)
 		return (0);
-
 	i = start;
 	j = 0;
 	while (i < slen && j < len)
 		new_str[j++] = s[i++];
 	new_str[j] = '\0';
-
 	return (new_str);
 }
 
-// создаем подстроку, s входная строка, старт это индекс с какого символа дожна создаваться подстрока, лен ожидаемая длина целевой подстроки.
+/* создаем подстроку, s входная строка, старт это индекс с какого символа
+дожна создаваться подстрока, лен ожидаемая длина целевой подстроки.*/
 /*char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
@@ -63,7 +61,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (pts);
 }
 */
-
 
 /*
 int	main()

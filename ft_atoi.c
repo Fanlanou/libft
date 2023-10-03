@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 13:07:37 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/30 20:29:40 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:37:36 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	sign = 1;
 	result = 0;
-	//while (nptr[i] == ' ' || (nptr[i] >= 07 && nptr[i] <= 13))
-	while (nptr[i] == ' ' || nptr[i] == '\n' || nptr[i] == '\t' || nptr[i] == '\v'
-			|| nptr[i] == '\f' || nptr[i] == '\r')
+	while (nptr[i] == ' ' || (nptr[i] >= '\t' && nptr[i] <= '\r'))
 		i++;
 	if (nptr[i] == '-' || nptr[i] == '+')
 	{

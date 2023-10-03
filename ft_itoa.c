@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 13:01:59 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/29 17:05:58 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/10/03 16:06:42 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,13 @@ int	getlen(int num)
 	return (len);
 }
 
+// исправил на long int внизу
+
 char	*ft_itoa(int n)
 {
-	char	*strnb;
-	long int		nb; // исправил на long int
-	int		nlen;
+	long int	nb;
+	int			nlen;
+	char		*strnb;
 
 	nlen = getlen(n);
 	nb = n;
@@ -40,7 +42,8 @@ char	*ft_itoa(int n)
 		nb *= -1;
 		nlen++;
 	}
-	if(!(strnb = malloc (sizeof(char) * (nlen + 1))))
+	strnb = malloc (sizeof(char) * (nlen + 1));
+	if (!strnb)
 		return (NULL);
 	strnb[nlen] = '\0';
 	while (nlen--)
