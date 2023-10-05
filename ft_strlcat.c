@@ -43,6 +43,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	count;
 	size_t	src_size;
 
+	if ((dst == NULL || src == NULL) && size == 0)
+		return (0);
 	count = 0;
 	dest_size = ft_strlen(dst);
 	src_size = ft_strlen(src);

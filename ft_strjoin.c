@@ -6,7 +6,7 @@
 /*   By: jbagomed <bagomedovjusuf@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 12:38:18 by jbagomed          #+#    #+#             */
-/*   Updated: 2023/09/18 13:12:14 by jbagomed         ###   ########.fr       */
+/*   Updated: 2023/10/04 14:17:10 by jbagomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*sum;
 	char	*ptf;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
 	sum = (char *)malloc(s1len + s2len + 1);
